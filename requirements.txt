@@ -1,0 +1,7 @@
+numpy==1.21.6
+opencv-python
+streamlit
+streamlit_webrtc
+mediapipe
+tensorflow
+Pillow
