@@ -3,3 +3,4 @@ streamlit_webrtc==0.47.1
 twilio~=8.10.0
 Pillow
 Numpy
+mediapipe

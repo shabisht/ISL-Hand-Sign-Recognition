@@ -27,13 +27,13 @@ class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 'Q', 27: 'R', 28: 'S', 29: 'T', 30: 'U', 31:
                 'V', 32: 'W', 33: 'X', 34: 'Y', 35: 'Z'}
 
-# hands = mp.solutions.hands.Hands(
-#                 static_image_mode= False,
-#                 max_num_hands=2,
-#                 model_complexity=1,
-#                 min_detection_confidence=0.3,
-#                 min_tracking_confidence=0.3
-#                 )
+hands = mp.solutions.hands.Hands(
+                static_image_mode= False,
+                max_num_hands=2,
+                model_complexity=1,
+                min_detection_confidence=0.3,
+                min_tracking_confidence=0.3
+                )
 
 # class VideoTransformer(VideoTransformerBase):
 #     def __init__(self):
@@ -72,41 +72,9 @@ class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
     
 # model = load_model()
 
-# st.header("Indian Sign Language Symbol Detection")
-# webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
-# with st.sidebar:
-#     st.info("Test")
-logger = logging.getLogger(__name__)
-def get_ice_servers():
-    """Use Twilio's TURN server because Streamlit Community Cloud has changed
-    its infrastructure and WebRTC connection cannot be established without TURN server now.  # noqa: E501
-    We considered Open Relay Project (https://www.metered.ca/tools/openrelay/) too,
-    but it is not stable and hardly works as some people reported like https://github.com/aiortc/aiortc/issues/832#issuecomment-1482420656  # noqa: E501
-    See https://github.com/whitphx/streamlit-webrtc/issues/1213
-    """
-
-    # Ref: https://www.twilio.com/docs/stun-turn/api
-    try:
-        account_sid = os.environ["TWILIO_ACCOUNT_SID"]
-        auth_token = os.environ["TWILIO_AUTH_TOKEN"]
-    except KeyError:
-        logger.warning(
-            "Twilio credentials are not set. Fallback to a free STUN server from Google."  # noqa: E501
-        )
-        return [{"urls": ["stun:stun.l.google.com:19302"]}]
-
-    client = Client(account_sid, auth_token)
-
-    try:
-        token = client.tokens.create()
-    except TwilioRestException as e:
-        st.warning(
-            f"Error occurred while accessing Twilio API. Fallback to a free STUN server from Google. ({e})"  # noqa: E501
-        )
-        return [{"urls": ["stun:stun.l.google.com:19302"]}]
-
-    return token.ice_servers
-
+st.header("Indian Sign Language Symbol Detection")
+with st.sidebar:
+    st.info("Test")
 
 def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
     img = frame.to_ndarray(format="bgr24")
