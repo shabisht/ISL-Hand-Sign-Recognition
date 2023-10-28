@@ -4,3 +4,4 @@ twilio~=8.10.0
 Pillow
 Numpy
 mediapipe
+tensorflow
