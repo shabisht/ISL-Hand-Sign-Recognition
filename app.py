@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import streamlit as st
 from streamlit_webrtc import VideoTransformerBase, webrtc_streamer, WebRtcMode
-import mediapipe as mp
-import tensorflow.keras as keras
+# import mediapipe as mp
+# import tensorflow.keras as keras
 from PIL import Image
 import av
 import logging
@@ -14,10 +14,10 @@ from twilio.rest import Client
 
 st.set_page_config(page_title='ISL Detection', page_icon=':clapper:')
 
-@st.cache_resource
-def load_model():
-    model = keras.models.load_model('models/ISL2.keras')
-    return model
+# @st.cache_resource
+# def load_model():
+#     model = keras.models.load_model('models/ISL2.keras')
+#     return model
 
 class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 6: '6', 7: '7', 8: '8', 9: '9', 10: 'A', 11:
@@ -142,15 +142,12 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
     return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
-model = load_model()
+# model = load_model()
 
 webrtc_ctx = webrtc_streamer(
     key="object-detection",
     mode=WebRtcMode.SENDRECV,
-    rtc_configuration={
-        "iceServers": get_ice_servers(),
-        "iceTransportPolicy": "relay",
-    },
+    rtc_configuration={"iceServers": get_ice_servers()},
     video_frame_callback=video_frame_callback,
     media_stream_constraints={"video": True, "audio": False},
     async_processing=True,
