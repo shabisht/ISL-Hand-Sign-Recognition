@@ -21,13 +21,13 @@ class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 'Q', 27: 'R', 28: 'S', 29: 'T', 30: 'U', 31:
                 'V', 32: 'W', 33: 'X', 34: 'Y', 35: 'Z'}
 
-hands = mp.solutions.hands.Hands(
-                static_image_mode= False,
-                max_num_hands=2,
-                model_complexity=1,
-                min_detection_confidence=0.3,
-                min_tracking_confidence=0.3
-                )
+# hands = mp.solutions.hands.Hands(
+#                 static_image_mode= False,
+#                 max_num_hands=2,
+#                 model_complexity=1,
+#                 min_detection_confidence=0.3,
+#                 min_tracking_confidence=0.3
+#                 )
 
 class VideoTransformer(VideoTransformerBase):
     def __init__(self):
@@ -36,31 +36,31 @@ class VideoTransformer(VideoTransformerBase):
         img = frame.to_ndarray(format="bgr24")
         height, width, _ = img.shape
         offset = 30
-        results = hands.process(img)
-        if results.multi_hand_landmarks:
-            for hand_landmarks in results.multi_hand_landmarks:
-                mp.solutions.draw_utis.draw_landmarks(
-                    img, hand_landmarks, connections=mp.solutions.hands.HAND_CONNECTIONS
-                )
-                x_min, y_min, x_max, y_max = np.inf, np.inf, 0, 0
-                for landmark in hand_landmarks.landmark:
-                    x_min, y_min = int(min(landmark.x*width, x_min)), int(min(landmark.y*height, y_min))
-                    x_max, y_max = int(max(landmark.x*width, x_max)), int(max(landmark.y*height, y_max))
+        # results = hands.process(img)
+        # if results.multi_hand_landmarks:
+        #     for hand_landmarks in results.multi_hand_landmarks:
+        #         mp.solutions.draw_utis.draw_landmarks(
+        #             img, hand_landmarks, connections=mp.solutions.hands.HAND_CONNECTIONS
+        #         )
+        #         x_min, y_min, x_max, y_max = np.inf, np.inf, 0, 0
+        #         for landmark in hand_landmarks.landmark:
+        #             x_min, y_min = int(min(landmark.x*width, x_min)), int(min(landmark.y*height, y_min))
+        #             x_max, y_max = int(max(landmark.x*width, x_max)), int(max(landmark.y*height, y_max))
         
-            # cv2.imwrite("test.jpg", img[y_min-offset:y_max+offset, x_min-offset:x_max+offset])
-            try:
-                test_img = Image.fromarray(img[y_min-offset:y_max+offset, x_min-offset:x_max+offset])
-                test_img = test_img.resize((250,250))
-                test_img = np.expand_dims(np.array(test_img), axis=0)
-                prediction = model.predict(test_img)
-                value = max(prediction[0])
-                label = np.argmax(prediction[0])
+        #     # cv2.imwrite("test.jpg", img[y_min-offset:y_max+offset, x_min-offset:x_max+offset])
+        #     try:
+        #         test_img = Image.fromarray(img[y_min-offset:y_max+offset, x_min-offset:x_max+offset])
+        #         test_img = test_img.resize((250,250))
+        #         test_img = np.expand_dims(np.array(test_img), axis=0)
+        #         prediction = model.predict(test_img)
+        #         value = max(prediction[0])
+        #         label = np.argmax(prediction[0])
 
-                cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (255,0,0),2)
-                cv2.putText(img, f"{label}- {value.format('.2f')}", (x_min, y_min-offset-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv2.LINE_AA)
+        #         cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (255,0,0),2)
+        #         cv2.putText(img, f"{label}- {value.format('.2f')}", (x_min, y_min-offset-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv2.LINE_AA)
             
-            except ValueError:
-                pass
+        #     except ValueError:
+        #         pass
         # img = cv2.flip(img, 1)
         return img
     
