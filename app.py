@@ -108,7 +108,7 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
         
         except ValueError:
             pass
-
+    cv2.rectangle(img, (0, 100), (0, 100), (255,0,0),2)
     return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
