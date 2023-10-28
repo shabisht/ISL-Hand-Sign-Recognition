@@ -81,16 +81,16 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
 
     height, width, _ = img.shape
     offset = 30
-    # results = hands.process(img)
-    # if results.multi_hand_landmarks:
-    #     for hand_landmarks in results.multi_hand_landmarks:
-    #         mp.solutions.draw_utis.draw_landmarks(
-    #             img, hand_landmarks, connections=mp.solutions.hands.HAND_CONNECTIONS
-    #         )
-    #         x_min, y_min, x_max, y_max = np.inf, np.inf, 0, 0
-    #         for landmark in hand_landmarks.landmark:
-    #             x_min, y_min = int(min(landmark.x*width, x_min)), int(min(landmark.y*height, y_min))
-    #             x_max, y_max = int(max(landmark.x*width, x_max)), int(max(landmark.y*height, y_max))
+    results = hands.process(img)
+    if results.multi_hand_landmarks:
+        for hand_landmarks in results.multi_hand_landmarks:
+            mp.solutions.draw_utis.draw_landmarks(
+                img, hand_landmarks, connections=mp.solutions.hands.HAND_CONNECTIONS
+            )
+            x_min, y_min, x_max, y_max = np.inf, np.inf, 0, 0
+            for landmark in hand_landmarks.landmark:
+                x_min, y_min = int(min(landmark.x*width, x_min)), int(min(landmark.y*height, y_min))
+                x_max, y_max = int(max(landmark.x*width, x_max)), int(max(landmark.y*height, y_max))
     
     #     # cv2.imwrite("test.jpg", img[y_min-offset:y_max+offset, x_min-offset:x_max+offset])
     #     try:
