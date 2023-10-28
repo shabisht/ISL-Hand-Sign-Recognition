@@ -27,13 +27,13 @@ class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 'Q', 27: 'R', 28: 'S', 29: 'T', 30: 'U', 31:
                 'V', 32: 'W', 33: 'X', 34: 'Y', 35: 'Z'}
 
-hands = mp.solutions.hands.Hands(
-                static_image_mode= False,
-                max_num_hands=2,
-                model_complexity=1,
-                min_detection_confidence=0.3,
-                min_tracking_confidence=0.3
-                )
+# hands = mp.solutions.hands.Hands(
+#                 static_image_mode= False,
+#                 max_num_hands=2,
+#                 model_complexity=1,
+#                 min_detection_confidence=0.3,
+#                 min_tracking_confidence=0.3
+#                 )
 
 # class VideoTransformer(VideoTransformerBase):
 #     def __init__(self):
@@ -113,7 +113,7 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
 
     height, width, _ = img.shape
     offset = 30
-    results = hands.process(img)
+    # results = hands.process(img)
     # if results.multi_hand_landmarks:
     #     for hand_landmarks in results.multi_hand_landmarks:
     #         mp.solutions.draw_utis.draw_landmarks(
