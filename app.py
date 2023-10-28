@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import streamlit as st
 from streamlit_webrtc import VideoTransformerBase, webrtc_streamer, WebRtcMode
-# import mediapipe as mp
+import mediapipe as mp
 # import tensorflow.keras as keras
 from PIL import Image
 import av
