@@ -41,11 +41,11 @@ if img is not None:
                 cv2.putText(rgb_img2, f"{st.session_state.class_labels[label]} - {round(value*100,2)}%", (x_min, y_min-offset-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv2.LINE_AA)
             except ValueError:
                 pass
-        col1, col2 = st.columns(2)
-        col1.header("Orignal Image")
-        col1.image(rgb_img)
-        col2.header("Hand Sign Detected")
-        col2.image(rgb_img2)
+        # col1, col2 = st.columns(2)
+        # col1.header("Orignal Image")
+        # col1.image(rgb_img)
+        st.header("Hand Sign Detected")
+        st.image(rgb_img2)
     else:
          st.image(img)
          st.warning("Sorry no hands detected in above image")
