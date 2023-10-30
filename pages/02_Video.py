@@ -44,12 +44,12 @@ def process(image):
     offset = 20
     if results.multi_hand_landmarks:
       for hand_landmarks in results.multi_hand_landmarks:
-        mp_drawing.draw_landmarks(
-            img,
-            hand_landmarks,
-            mp_hands.HAND_CONNECTIONS,
-            mp_drawing_styles.get_default_hand_landmarks_style(),
-            mp_drawing_styles.get_default_hand_connections_style())
+        # mp_drawing.draw_landmarks(
+        #     img,
+        #     hand_landmarks,
+        #     mp_hands.HAND_CONNECTIONS,
+        #     mp_drawing_styles.get_default_hand_landmarks_style(),
+        #     mp_drawing_styles.get_default_hand_connections_style())
         for landmark in hand_landmarks.landmark:
                 x_min, y_min = int(min(landmark.x*width, x_min)), int(min(landmark.y*height, y_min))
                 x_max, y_max = int(max(landmark.x*width, x_max)), int(max(landmark.y*height, y_max))
