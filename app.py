@@ -16,8 +16,8 @@ if 'hands' not in st.session_state:
                                 static_image_mode= False,
                                 max_num_hands=2,
                                 model_complexity=1,
-                                min_detection_confidence=0.3,
-                                min_tracking_confidence=0.3
+                                min_detection_confidence=0.5,
+                                min_tracking_confidence=0.5
                                 )
     st.session_state.model = load_model()
     st.session_state.class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
