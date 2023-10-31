@@ -50,12 +50,12 @@ enhancing their overall communication experience.
     syntax and grammar rules. 
 - ISL relies on various handshapes and movements to convey meaning. Different handshapes and movements can represent different words, ideas, or
 concepts.
-# Hand Signs for Digits 0-9
+## Hand Signs for Digits 0-9
 <br>
 <img src = 'images/ISL-digits.jpg' width='600' height='300'>
 <br>
 
-# Hand Signs for Alphbet A-Z
+## Hand Signs for Alphbet A-Z
 <br>
 <img src = 'images/ISL alphabets.jpg' width='600' height='600'>
 </details>
