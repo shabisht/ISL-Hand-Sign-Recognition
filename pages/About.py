@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title='ISL Detection', layout='wide', page_icon='🙌')
+st.set_page_config(page_title='ISL Detection', layout='wide', page_icon=':raised_hands:')
 
 cols = st.columns([2.5,5,2.5])
 cols[1].image('images/ISL Logo1.png')
