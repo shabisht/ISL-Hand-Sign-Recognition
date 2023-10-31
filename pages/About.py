@@ -56,8 +56,12 @@ with st.expander("Data Analysis"):
 
           #### iii). CNN Architecture
           - created a **Convolutional Nueral Network** (CNN) Model with below architecture
-          {st.image('images/s1.png')}
+        '''
+  
+  st.markdown(message, unsafe_allow_html=True)
+  st.image('images/s1.png')
 
+  message = '''
           - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
 
           - Applied Keras' **ImageDataGenerator**, a powerful tool for augmenting the training dataset. This included techniques such as random horizontal rotation, flipping, adjustments in brightness, contrast, resizing, resampling, and more, resulting in a more diverse and authentic dataset.
