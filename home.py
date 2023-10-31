@@ -10,7 +10,7 @@ from methods import *
 
 @st.cache_resource
 def load_model():
-    model = keras.models.load_model("models/keras_model.h5", compile=False)
+    model = keras.models.load_model("models/keras_model.h5")
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
     class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 6: '6', 7: '7', 8: '8', 9: '9', 10: 'A', 11:
@@ -133,26 +133,27 @@ def process_img(img):
                 st.warning("Sorry no hands detected in above image")
 
 
-st.image('images/ISL Logo2.jpg')
+cols = st.columns([2.5,5,2.5])
+cols[1].image('images/ISL Logo1.png')
 st.header("Try below options to use ISL Digit Detections by making hand signs")
 
 selected_option = st.selectbox("Select option", options=['WebCam', 'Upload Video','Upload Image'], key="selectOption")
 if selected_option == 'WebCam':
-    webCam_option = st.radio("select a mode", options=['Capture Image', 'Live WebCam', 'Turn Off WebCam'], key='webCam_radioOption')
-    if webCam_option == 'Capture Image':
+    webCam_option = st.radio("select a mode", options=['Turn Off WebCam', 'Capture Image', 'Live WebCam'], key='webCam_radioOption')
+    if webCam_option == 'Turn Off WebCam':
+        pass
+    elif webCam_option == 'Capture Image':
         img = st.camera_input("Capture a photo with Indian Sign Language Digit or Alphabet", key='input_img')
         process_img(img)
-    elif webCam_option == 'Live WebCam':
+    else:
         webrtc_ctx = webrtc_streamer(
                         key="Live WebCam Hand Sign Detection",
                         mode=WebRtcMode.SENDRECV,
                         rtc_configuration=RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}),
                         media_stream_constraints={"video": True, "audio": False},
                         video_processor_factory=VideoProcessor,
-                        async_processing=True,
-                    )
-    else:
-        pass
+                        async_processing=True)
+        
 elif selected_option == 'Upload Video':
     # uploadedVideo = st.file_uploader("Upload Video", help="Upload files are limited to 100MB", key="uploadedVideo")
     process_video(st, np, cv2, mp, Image)
