@@ -9,20 +9,18 @@
 <br>
 
 # Objective
-<details>
-    <summary>Expand/Collapse</summary>
-    The objective of this web app is to develop a real-time Indian Sign Language (ISL) symbol
-    detection system. Its primary aim is to facilitate seamless communication between 
-    hearing-impaired individuals and the general population. Many people are not familiar 
-    with sign language, which can create communication barriers. To address this, we are 
-    initially focusing on detecting basic hand signs related to alphabets and digits. Our 
-    goal is to ensure that hearing-impaired individuals can be better understood by others, 
-    enhancing their overall communication experience.
-</details>
+The objective of this web app is to develop a real-time Indian Sign Language (ISL) symbol
+detection system. Its primary aim is to facilitate seamless communication between 
+hearing-impaired individuals and the general population. Many people are not familiar 
+with sign language, which can create communication barriers. To address this, we are 
+initially focusing on detecting basic hand signs related to alphabets and digits. Our 
+goal is to ensure that hearing-impaired individuals can be better understood by others, 
+enhancing their overall communication experience.
+
 
 # Indian 🖐️ Sign 🤲 Language (ISL) History
 <details>
-    <summary>Expand/Collapse</summary>
+    <summary></summary>
     In the 2000s, the Indian deaf community advocated for an institute dedicated to Indian 
         Sign Language (ISL) teaching and research. Their efforts culminated in the approval of 
         the Indian Sign Language Research and Training Center (ISLRTC) under the Indira Gandhi 
@@ -35,35 +33,32 @@
         addressed gaps in the education and communication needs of India's deaf community.
 </details>
 
-About the App
-<details>
-    <summary>Expand/Collapse</summary>
-
-# This Web App provides:
+# About the App
+#### This Web App provides:
 - Real-time hand sign detection based on the Indian Sign Language (ISL).
 - Aids those unfamiliar with ISL in understanding hearing-impaired individuals.
 - Multiple detection options: real-time detection with live camera feed, image uploads, and video analysis.
 - Identificaton of specific signs present in the input, whether it's an image, video, or live camera feed.
 - Initial release includes digit (0-9) detection; alphabet detection is planned for a future update.
-</details>
+
 
 # ISL Representation
 <details>
-    <summary>Expand/Collapse</summary>
+    <summary></summary>
 
 - ISL has its own distinct vocabulary and grammar system. It is not directly based on spoken languages like Hindi or English but has its own
     syntax and grammar rules. 
 - ISL relies on various handshapes and movements to convey meaning. Different handshapes and movements can represent different words, ideas, or
 concepts.
 # Hand Signs for Digits 0-9
-<img src = 'images/ISL-digits.jpg' width='800' height='600'>
+<img src = 'images/ISL-digits.jpg' width='800' height='500'>
 # Hand Signs for Alphbet A-Z
-<img src = 'images/ISL-alphabets.jpg' width='800' height='600'>
+<img src = 'images/ISL alphabets.jpg' width='300' height='600'>
 </details>
 
 # Data Analysis
 <details>
-    <summary>Expand/Collapse</summary>
+    <summary></summary>
 
 #### i). Source Data
 - Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
@@ -90,3 +85,19 @@ concepts.
 
 ## Web Frontend
 - Streamlit is used for building the web app and Stremlit Cloud is used for hosting the web app.
+
+## Installation
+To set up and use Sentiment Analyzer in your own project, follow these steps:
+
+- Clone this repository to your local machine.
+```
+    git clone https://github.com/peskyji/ISL-Hand-Sign-Recognition.git
+```
+- Install the required dependencies for python 3.9 or above.
+```
+    pip install -r requirements.txt
+```
+- Run the streamlit application
+```
+streamlit run home.py
+```
