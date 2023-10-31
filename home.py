@@ -10,7 +10,7 @@ from methods import *
 
 @st.cache_resource
 def load_model():
-    model = keras.models.load_model("models/keras_model.h5")
+    model = keras.models.load_model("models/keras_model.h5", compile=False)
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
     class_labels = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                 6: '6', 7: '7', 8: '8', 9: '9', 10: 'A', 11:
@@ -135,7 +135,7 @@ def process_img(img):
 
 cols = st.columns([2.5,5,2.5])
 cols[1].image('images/ISL Logo1.png')
-st.header("Try below options to use ISL Digit Detections by making hand signs")
+st.header("Explore below options for ISL Digits Detection")
 
 selected_option = st.selectbox("Select option", options=['WebCam', 'Upload Video','Upload Image'], key="selectOption")
 if selected_option == 'WebCam':
