@@ -51,8 +51,12 @@ enhancing their overall communication experience.
 - ISL relies on various handshapes and movements to convey meaning. Different handshapes and movements can represent different words, ideas, or
 concepts.
 # Hand Signs for Digits 0-9
+<br>
 <img src = 'images/ISL-digits.jpg' width='800' height='500'>
+<br>
+
 # Hand Signs for Alphbet A-Z
+<br>
 <img src = 'images/ISL alphabets.jpg' width='300' height='600'>
 </details>
 
