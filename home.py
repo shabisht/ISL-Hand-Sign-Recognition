@@ -29,7 +29,7 @@ def load_model():
             )
     return model, data, class_labels, mp_drawing, mp_drawing_styles, mp_hands, hands
 
-st.set_page_config(page_title='ISL Detection', layout='wide', page_icon=':clapper:')
+st.set_page_config(page_title='ISL Detection', layout='wide', page_icon=🙌)
 model, data, class_labels, mp_drawing, mp_drawing_styles, mp_hands, hands = load_model()
 
 def process(image):
