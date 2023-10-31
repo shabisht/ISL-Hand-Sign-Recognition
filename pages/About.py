@@ -39,3 +39,48 @@ st.image("images/ISL-digits.jpg")
 
 st.markdown("# Hand Signs for Alphabet A-Z", unsafe_allow_html=True)
 st.image("images/ISL alphabets.jpg")
+
+with st.expander("Data Analysis"):
+  message = '''
+          #### i). Source Data
+          - Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
+
+          #### ii). Preprocessing
+          - **Data Augmentation** - a technique to increase the diversity of your training set by applying random (but realistic) transformations, such as image rotation.
+
+          - Applied data augmentation techniques to enhance training dataset diversity using Keras' ImageDataGenerator. Techniques included random horizontal rotation, flipping, brightness and contrast adjustments, resizing, resampling, and more.
+
+          - Developed a custom dataset utilizing Google Teachable Machine, further contributing to the dataset's richness and authenticity.
+
+          - Please refer to this **[notebook](https://colab.research.google.com/drive/1w6l66LP_64kAyPYr55McLQwcjCvdrlEo#scrollTo=6MB5xTQeSLOP)** for complete detailed analysis, also check out other files in this **[📁](https://drive.google.com/drive/u/0/folders/1REEotHVi5nWUc2GXjauM6MUBULE7TL_d)**,all these are part of the Data Pre-processing and Data Cleaning.
+
+          #### iii). CNN Architecture
+          - created a **Convolutional Nueral Network** (CNN) Model with below architecture
+          <img src='images/s1.png' width='800' height='600'>
+
+          - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
+
+          - Applied Keras' **ImageDataGenerator**, a powerful tool for augmenting the training dataset. This included techniques such as random horizontal rotation, flipping, adjustments in brightness, contrast, resizing, resampling, and more, resulting in a more diverse and authentic dataset.
+
+          - Incorporated **Mediapipe**'s Hands solutions to accurately identify and display hand landmarks within images. Subsequently, the hand regions were cropped from the images and fed into the CNN model for precise predictions.
+
+          ## Web Frontend
+          - Streamlit is used for building the web app and Stremlit Cloud is used for hosting the web app.
+
+          ## Installation
+          To set up and use Sentiment Analyzer in your own project, follow these steps:
+
+          - Clone this repository to your local machine.
+          ```
+            git clone https://github.com/peskyji/ISL-Hand-Sign-Recognition.git
+          ```
+          - Install the required dependencies for python 3.9 or above.
+          ```
+            pip install -r requirements.txt
+          ```
+          - Run the streamlit application
+          ```
+          streamlit run home.py
+          ```
+    ''' 
+  st.markdown(message, unsafe_allow_html=True)
