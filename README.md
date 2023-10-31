@@ -1,15 +1,16 @@
-# ISL Detection - A Indian ☝ Sign 👋 Language 🖐️ Symbol Detection app.
+# ISL Detection - An Indian ☝ Sign 👋 Language 🖐️ Symbol Detection app.
 [![Site](https://img.shields.io/static/v1?label=visit%20Website&message=ISL%20Detection%20Page&color=yellow)](https://isl-detection.streamlit.app)
 [![Linkedin](https://img.shields.io/static/v1?label=visit&message=My%20Linkedin%20Page&color=blue&logo=linkedin)](https://www.linkedin.com/in/shailesh-bisht-b42a73184/)
 [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=c21a09&logo=streamlit)](https://streamlit.io/)
-[![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=brown&logo=python)]()
+[![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=orange&logo=python)]()
 [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=blue&logo=opencv)]()
-[![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=&color=yellow&logo=tensorflow)]()
-[![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=&color=olive&logo=mediapipe)]()
+[![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=yellow&logo=tensorflow)]()
+[![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=0.10.7&color=green&logo=mediapipe)]()
 <br>
 
+# Objective
 <details>
-    <summary>Objective</summary>
+    <summary>Expand/Collapse</summary>
     The objective of this web app is to develop a real-time Indian Sign Language (ISL) symbol
     detection system. Its primary aim is to facilitate seamless communication between 
     hearing-impaired individuals and the general population. Many people are not familiar 
@@ -19,8 +20,9 @@
     enhancing their overall communication experience.
 </details>
 
+# Indian 🖐️ Sign 🤲 Language (ISL) History
 <details>
-    <summary>Indian 🖐️ Sign 🤲 Language (ISL) History</summary>
+    <summary>Expand/Collapse</summary>
     In the 2000s, the Indian deaf community advocated for an institute dedicated to Indian 
         Sign Language (ISL) teaching and research. Their efforts culminated in the approval of 
         the Indian Sign Language Research and Training Center (ISLRTC) under the Indira Gandhi 
@@ -33,51 +35,57 @@
         addressed gaps in the education and communication needs of India's deaf community.
 </details>
 
+About the App
 <details>
-    <summary>About the App</summary>
-    # This Web App provides:
-        - Real-time hand sign detection based on the Indian Sign Language (ISL).
-        - Aids those unfamiliar with ISL in understanding hearing-impaired individuals.
-        - Multiple detection options: real-time detection with live camera feed, image uploads, and video analysis.
-        - Identificaton of specific signs present in the input, whether it's an image, video, or live camera feed.
-        - Initial release includes digit (0-9) detection; alphabet detection is planned for a future update.
+    <summary>Expand/Collapse</summary>
+
+# This Web App provides:
+- Real-time hand sign detection based on the Indian Sign Language (ISL).
+- Aids those unfamiliar with ISL in understanding hearing-impaired individuals.
+- Multiple detection options: real-time detection with live camera feed, image uploads, and video analysis.
+- Identificaton of specific signs present in the input, whether it's an image, video, or live camera feed.
+- Initial release includes digit (0-9) detection; alphabet detection is planned for a future update.
 </details>
 
+# ISL Representation
 <details>
-    <summary>ISL Representation</summary>
-        - ISL has its own distinct vocabulary and grammar system. It is not directly based on spoken languages like Hindi or English but has its own
-         syntax and grammar rules. 
-        - ISL relies on various handshapes and movements to convey meaning. Different handshapes and movements can represent different words, ideas, or
-        concepts.
-        # Hand Signs for Digits 0-9
-        <img src = 'images/ISL-digits.jpg' width='800' height='600'>
-        # Hand Signs for Alphbet A-Z
-        <img src = 'images/ISL-Alphabets.jpg' width='800' height='600'>
+    <summary>Expand/Collapse</summary>
+
+- ISL has its own distinct vocabulary and grammar system. It is not directly based on spoken languages like Hindi or English but has its own
+    syntax and grammar rules. 
+- ISL relies on various handshapes and movements to convey meaning. Different handshapes and movements can represent different words, ideas, or
+concepts.
+# Hand Signs for Digits 0-9
+<img src = 'images/ISL-digits.jpg' width='800' height='600'>
+# Hand Signs for Alphbet A-Z
+<img src = 'images/ISL-alphabets.jpg' width='800' height='600'>
 </details>
 
+# Data Analysis
 <details>
-    <summary>Data Analysis</summary>
-    #### i). Source Data
-    - Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
+    <summary>Expand/Collapse</summary>
 
-    #### ii). Preprocessing
-    - **Data Augmentation** - a technique to increase the diversity of your training set by applying random (but realistic) transformations, such as image rotation.
+#### i). Source Data
+- Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
 
-    - Applied data augmentation techniques to enhance training dataset diversity using Keras' ImageDataGenerator. Techniques included random horizontal rotation, flipping, brightness and contrast adjustments, resizing, resampling, and more.
+#### ii). Preprocessing
+- **Data Augmentation** - a technique to increase the diversity of your training set by applying random (but realistic) transformations, such as image rotation.
 
-    - Developed a custom dataset utilizing Google Teachable Machine, further contributing to the dataset's richness and authenticity.
+- Applied data augmentation techniques to enhance training dataset diversity using Keras' ImageDataGenerator. Techniques included random horizontal rotation, flipping, brightness and contrast adjustments, resizing, resampling, and more.
 
-    - Please refer to this **[notebook](https://colab.research.google.com/drive/1w6l66LP_64kAyPYr55McLQwcjCvdrlEo#scrollTo=6MB5xTQeSLOP)** for complete detailed analysis, also check out other files in this **[📁](https://drive.google.com/drive/u/0/folders/1REEotHVi5nWUc2GXjauM6MUBULE7TL_d)**,all these are part of the Data Pre-processing and Data Cleaning.
+- Developed a custom dataset utilizing Google Teachable Machine, further contributing to the dataset's richness and authenticity.
 
-    #### iii). CNN Architecture
-    - created a **Convolutional Nueral Network** (CNN) Model with below architecture
-    <img src='images/s1.png' width='800' height='600'>
+- Please refer to this **[notebook](https://colab.research.google.com/drive/1w6l66LP_64kAyPYr55McLQwcjCvdrlEo#scrollTo=6MB5xTQeSLOP)** for complete detailed analysis, also check out other files in this **[📁](https://drive.google.com/drive/u/0/folders/1REEotHVi5nWUc2GXjauM6MUBULE7TL_d)**,all these are part of the Data Pre-processing and Data Cleaning.
 
-    - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
+#### iii). CNN Architecture
+- created a **Convolutional Nueral Network** (CNN) Model with below architecture
+<img src='images/s1.png' width='800' height='600'>
 
-    - Applied Keras' **ImageDataGenerator**, a powerful tool for augmenting the training dataset. This included techniques such as random horizontal rotation, flipping, adjustments in brightness, contrast, resizing, resampling, and more, resulting in a more diverse and authentic dataset.
+- Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
 
-    - Incorporated **Mediapipe**'s Hands solutions to accurately identify and display hand landmarks within images. Subsequently, the hand regions were cropped from the images and fed into the CNN model for precise predictions.
+- Applied Keras' **ImageDataGenerator**, a powerful tool for augmenting the training dataset. This included techniques such as random horizontal rotation, flipping, adjustments in brightness, contrast, resizing, resampling, and more, resulting in a more diverse and authentic dataset.
+
+- Incorporated **Mediapipe**'s Hands solutions to accurately identify and display hand landmarks within images. Subsequently, the hand regions were cropped from the images and fed into the CNN model for precise predictions.
 </details>
 
 ## Web Frontend
