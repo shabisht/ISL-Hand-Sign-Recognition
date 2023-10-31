@@ -15,7 +15,7 @@ message = '''
           goal is to ensure that hearing-impaired individuals can be better understood by others, 
           enhancing their overall communication experience.
 
-        # Indian Sign Language 🖐️ (ISL) History
+        # Indian 🖐️ Sign 🤲 Language (ISL) History
         In the 2000s, the Indian deaf community advocated for an institute dedicated to Indian 
         Sign Language (ISL) teaching and research. Their efforts culminated in the approval of 
         the Indian Sign Language Research and Training Center (ISLRTC) under the Indira Gandhi 
