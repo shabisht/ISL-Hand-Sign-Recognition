@@ -11,7 +11,7 @@ message = '''
         [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=c21a09&logo=streamlit)](https://streamlit.io/)
         [![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=orange&logo=python)]()
         [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=blue&logo=opencv)]()
-        [![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=yellow&logo=tensorflow)]()
+        [![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=pink&logo=tensorflow)]()
         [![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=0.10.7&color=green&logo=mediapipe)]()
         
         # Objective
