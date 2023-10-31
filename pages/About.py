@@ -6,14 +6,6 @@ cols = st.columns([2.5,5,2.5])
 cols[1].image('images/ISL Logo1.png')
 
 message = '''
-        [![Site](https://img.shields.io/static/v1?label=visit%20Website&message=ISL%20Detection%20Page&color=yellow)](https://isl-detection.streamlit.app)
-        [![Linkedin](https://img.shields.io/static/v1?label=visit&message=My%20Linkedin%20Page&color=blue&logo=linkedin)](https://www.linkedin.com/in/shailesh-bisht-b42a73184/)
-        [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=c21a09&logo=streamlit)](https://streamlit.io/)
-        [![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=orange&logo=python)]()
-        [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=blue&logo=opencv)]()
-        [![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=yellow&logo=tensorflow)]()
-        [![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=0.10.7&color=green&logo=mediapipe)]()
-        
         # Objective
          The objective of this web app is to develop a real-time Indian Sign Language (ISL) symbol
           detection system. Its primary aim is to facilitate seamless communication between 
@@ -50,6 +42,14 @@ st.image("images/ISL alphabets.jpg")
 
 with st.expander("Data Analysis"):
   message = f'''
+          [![Site](https://img.shields.io/static/v1?label=visit%20Website&message=ISL%20Detection%20Page&color=yellow)](https://isl-detection.streamlit.app)
+          [![Linkedin](https://img.shields.io/static/v1?label=visit&message=My%20Linkedin%20Page&color=blue&logo=linkedin)](https://www.linkedin.com/in/shailesh-bisht-b42a73184/)
+          [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=c21a09&logo=streamlit)](https://streamlit.io/)
+          [![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=orange&logo=python)]()
+          [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=blue&logo=opencv)]()
+          [![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=yellow&logo=tensorflow)]()
+          [![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=0.10.7&color=green&logo=mediapipe)]()
+          
           #### i). Source Data
           - Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
 
