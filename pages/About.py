@@ -62,7 +62,7 @@ with st.expander("Data Analysis"):
   st.image('images/s1.png')
 
   message = '''
-          - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
+          - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which was more Deep Neural Network than above one and perfomed significantly better.
 
           - Applied Keras' **ImageDataGenerator**, a powerful tool for augmenting the training dataset. This included techniques such as random horizontal rotation, flipping, adjustments in brightness, contrast, resizing, resampling, and more, resulting in a more diverse and authentic dataset.
 
