@@ -8,9 +8,9 @@ cols[1].image('images/ISL Logo1.png')
 message = '''
         [![Site](https://img.shields.io/static/v1?label=visit%20Website&message=ISL%20Detection%20Page&color=yellow)](https://isl-detection.streamlit.app)
         [![Linkedin](https://img.shields.io/static/v1?label=visit&message=My%20Linkedin%20Page&color=blue&logo=linkedin)](https://www.linkedin.com/in/shailesh-bisht-b42a73184/)
-        [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=c21a09&logo=streamlit)](https://streamlit.io/)
+        [![Hosted-on](https://img.shields.io/static/v1?label=made%20with&message=Streamlit&color=red&logo=streamlit)](https://streamlit.io/)
         [![python](https://img.shields.io/static/v1?label=Python&message=%3E=3.9&color=orange&logo=python)]()
-        [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=blue&logo=opencv)]()
+        [![OpenCV](https://img.shields.io/static/v1?label=OpenCV-headless-python&message=4.8.1.78&color=purple&logo=opencv)]()
         [![Tensorflow](https://img.shields.io/static/v1?label=Tensorflow&message=2.14.0&color=pink&logo=tensorflow)]()
         [![mediapipe](https://img.shields.io/static/v1?label=Mediapipe&message=0.10.7&color=green&logo=mediapipe)]()
         
