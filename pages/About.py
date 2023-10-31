@@ -41,7 +41,7 @@ st.markdown("# Hand Signs for Alphabet A-Z", unsafe_allow_html=True)
 st.image("images/ISL alphabets.jpg")
 
 with st.expander("Data Analysis"):
-  message = '''
+  message = f'''
           #### i). Source Data
           - Created Custom Data of Hand signs using Google's [Teachable Machines](https://teachablemachine.withgoogle.com/train) along with [Kaggle's ISL Dataset](https://www.kaggle.com/datasets/prathumarikeri/indian-sign-language-isl/data)
 
@@ -56,7 +56,7 @@ with st.expander("Data Analysis"):
 
           #### iii). CNN Architecture
           - created a **Convolutional Nueral Network** (CNN) Model with below architecture
-          <img src='images/s1.png' width='800' height='600'>
+          {st.image('images/s1.png')}
 
           - Leveraged Google's **Teachable Machine** to develop a more intricate neural network, which significantly improved model performance.
 
