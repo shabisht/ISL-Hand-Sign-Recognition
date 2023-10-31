@@ -52,12 +52,12 @@ enhancing their overall communication experience.
 concepts.
 # Hand Signs for Digits 0-9
 <br>
-<img src = 'images/ISL-digits.jpg' width='800' height='500'>
+<img src = 'images/ISL-digits.jpg' width='600' height='300'>
 <br>
 
 # Hand Signs for Alphbet A-Z
 <br>
-<img src = 'images/ISL alphabets.jpg' width='300' height='600'>
+<img src = 'images/ISL alphabets.jpg' width='600' height='600'>
 </details>
 
 # Data Analysis
